@@ -1,10 +1,14 @@
 body {
+    /*----- LOADING SCREEN -----*/
+    --Loading-Screen-FadeOut-Speed:400ms; /* ms only, no s */
+
     /*----- HEADINGS -----*/
     --Heading-Size-S: 0.75rem;
     --Heading-Size-M: 1.25rem;
     --Heading-Size-L: 1.375rem;
     --Heading-Size-XL: 2rem;
     --Heading-Size-XXL: 2.5rem;
+    --Heading-Size-XXXL: 3rem;
     --Heading-Letter-Spacing:0px;
 
     /*----- BODY TEXT -----*/
@@ -12,6 +16,7 @@ body {
     --Body-Text-S: 0.75rem;
     --Body-Text-M: 0.875rem;
     --Body-Text-L: 1rem;
+    --Body-Text-Letter-Spacing-XS:0.02em;
     --Body-Text-Letter-Spacing-S:0.03em;
     --Body-Text-Letter-Spacing-M:0.06em;
 
@@ -24,11 +29,25 @@ body {
     /*----- COLORS -----*/
     --Text-Color-1:#000;
     --Text-Color-2:#313131;
+    --Text-Color-3:#939393;
+    --Text-Color-4: #6D6D6D;
+    --Nav-Links-Color:#464646;
 
-    --Accent-1:#411e94; /* dark purple */
-    --Accent-1-RGB:65,30,148;
-    --Accent-2: white;
-    --Accent-2-RGB:255,255,255;
+    --Background-1: #fff;
+    --Background-1-RGB: 255, 255, 255;
+
+    --Background-2: #e8e8e8;
+    --Background-2-RGB: 232, 232, 232;
+
+    --Accent-1: #411e94; /* dark purple */
+    --Accent-1-RGB: 65,30,148;
+
+    --Accent-2: #89C4C9; /* light blue */
+    --Accent-2-RGB: 137,196,201;
+
+    --Line-Color: #e6e6e6 ;
+
+    --Off-White: #F9F9F9;
 
     /*----- GLOBAL SETTINGS -----*/
     --Rainbow-Borders-Width: 3px;
@@ -44,17 +63,19 @@ body {
     --Nav-Logo-Width: 160px;
 
     --Nav-Links-Touch-Padding: 10px;
-    --Nav-Links-Spacing: 3.5rem;
+    --Nav-Links-Spacing: 4.5rem;
 
     /*----- HEADER -----*/
     --Header-Height: calc(var(--Container-Width) * 0.6);
     --Header-Border-Radius:50px;
     --Header-Inner-Margins: 48px;
     --Header-Text-Row-Spacing: 2rem;
+    --Header-Text-Translate: 80px;
 
     /*----- SECTION: GAPS -----*/
     --Sections-Divider-Width:83vw;
     --Sections-Spacing-Y:5rem;
+    --Sections-Max-Width: 933px;
 
     /*----- SECTION: FEATURES -----*/
     --Features-Grid-Top-Gap:2rem;
@@ -62,7 +83,7 @@ body {
     --Features-Spacing:2.3rem;
     --Features-Border-Radius:20px;
     --Features-Box-Padding:1.4rem;
-    --Features-Front-Image-Height:5rem;
+    --Features-Front-Image-Height:6rem;
 
     --Features-Flip-Speed:0.75s;
     
@@ -77,12 +98,36 @@ body {
     --Video-Hover-Speed:0.3s;
 
     /*----- SECTION: TEAM -----*/
-    --Team-Section-Width:calc(var(--Container-Width) + (var(--Video-Gradient-Padding-X) * 1.5));
+    --Team-Section-Width:var(--Container-Width);
     --Team-Section-Top-Gap:2rem;
     --Team-Grid-Spacing-X:4rem;
-    --Team-Grid-Spacing-Y:5.5rem;
+    --Team-Grid-Spacing-Y:4rem;
     --Team-Photos-Size:7rem;
     --Team-Photos-Hover-Speed:0.25s;
     --Team-Photos-And-Text-Spacing:1rem;
     --Team-Link-Icons-Size:var(--Heading-Size-L);
+
+    /*----- FOOTER -----*/
+    --Footer-Padding-X:7.5rem;
+    --Footer-Padding-Y:5rem;
+    --Footer-BG:#1E1E1E;
+    --Footer-Text:#fff;
+
+    --Footer-Tagline-Width:25%;
+    --Footer-Quote-Mark-Width:calc(var(--Heading-Size-XXL));
+
+    --Footer-Column-Spacing: 8vw;
+
+    --Contact-Form-Fields-Width:234px;
+    --Contact-Form-Fields-Padding-X:1.8em;
+    --Contact-Form-Fields-Padding-Y:0.8em;
+
+    --Contact-Form-Fields-Spacing:1rem;
+    --Contact-Form-Fields-Right-Gap:2.5rem;
+
+    --Contact-Form-Logo-Width: 150px;
+
+    --Contact-Form-Button-Width:100px;
+    --Contact-Form-Button-Padding-X:0.420em;
+    --Contact-Form-Button-Padding-Y:0.420em;
 }

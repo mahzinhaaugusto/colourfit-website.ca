@@ -8,6 +8,8 @@
 
 <title>Colourfit 🌈</title>
 
+<meta name="description" content="Redefine your world of colours."/>
+
 <link href="./variables.css" rel="stylesheet">
 <link href="./mobile-variables.css" rel="stylesheet">
 <link href="./style.css" rel="stylesheet">
@@ -20,7 +22,14 @@
 </head>
 <body>
 
+<!----- LOADING ANIMATION ----->
+<div class="loading-screen">
+    <video muted autoplay src="./assets/videos/welcome-short.mp4"></video>
+</div>
+
 <!----- TOP BAR ----->
+<div class="main-content">
+
 <header class="welcome-screen">
     <nav>
         <!----- TOP BAR, LOGO ----->
@@ -28,11 +37,6 @@
             <!-- logo: multicolored -->
             <object type="image/svg+xml" data="./assets/svgs/logo.svg">
                 <img src="./assets/images/logo.png" alt="Colourfit Logo"/>
-            </object>
-
-            <!-- logo: white -->
-            <object type="image/svg+xml" data="./assets/svgs/logo-white.svg">
-                <img src="./assets/images/logo-white.png" alt="Colourfit Logo"/>
             </object>
         </a>
 
@@ -65,32 +69,37 @@
                 <li>
                     <a href="#contact">Contact</a>
                 </li>
+
+                <li>
+                    <a class="download-proposal-btn" target="_blank" href="https://acrobat.adobe.com/link/review?uri=urn:aaid:scds:US:b150a20f-a618-3c00-9cd9-5ba42f785f0f">Download Proposal</a>
+                </li>
             </ul>
         </div>
     </nav>
+    
+    <!----- DIVIDER / LINE ----->
+    <hr class="nav-divider">
 
     <!----- HEADER SECTION ----->
     <header class="welcome-header">
-        <div class="welcome-header-inner">
+        <div class="header-gradient"></div>
             <!----- HEADER, BACKGROUND GRADIENT ----->
-            <div class="header-gradient"></div>
-
             <div class="header-wrap">
                 <div class="header-left">
                     <!----- HEADER, HEADING ----->
-                    <h1>Unlock a world of vibrant <span>possibilites</span></h1>
-
-                    <!----- HEADER, PARAGRAPH ----->
-                    <p>Enhancing dressing experience for visually impaired individuals through accurate outfit color recommendations.</p>
+                    <h1>Unlock a world of vibrant <span>possibilities</span></h1>
                 </div>
 
                 <!----- HEADER, DESKTOP IMAGES ----->
+                <div class="header-middle">
+                    <img src="./assets/images/mockup1-2-merged.png" alt="Colourfit app preview"/>
+                </div>
+
                 <div class="header-right">
-                    <img src="./assets/images/mockup1.png" alt="Colourfit app preview"/>
-                    <img src="./assets/images/mockup2.png" alt="Colourfit app preview"/>
+                    <!----- HEADER, PARAGRAPH ----->
+                    <p>enhance the dressing experience for  visually impaired individuals through outfit colour recommendations!</p>
                 </div>
             </div><!--end header-wrap-->
-        </div><!--end header-welcome-inner-->
     </header>
 </header>
 
@@ -114,12 +123,11 @@
                 <div class="card-inner">
 
                     <!--- CARD, FRONT -->
-                    <div class="card-front">
+                    <div class="card-front  ">
                         <div class="card-front-content">
                             <div class="feature-column">
+                                <h3>scan & verification</h3>
                                 <img src="./assets/images/Feat1IMG.png" alt="Scan and Verification"/>
-    
-                                <h3>Scan & Verification</h3>
                             </div>
                         </div>
                     </div><!--end card-front-->
@@ -139,38 +147,6 @@
                 </div><!--end card-inner-->
             </article><!--end one-feature-->
 
-
-            <!----- FEATURE: COLOUR RECS ----->
-            <article class="one-feature">
-                <div class="card-inner">
-
-                    <!--- CARD, FRONT -->
-                    <div class="card-front">
-                        <div class="card-front-content">
-                            <div class="feature-column">
-                                <img src="./assets/images/Feat2IMG.png" alt="Colour Suggestions"/>
-    
-                                <h3>Colour Suggestions</h3>
-                            </div>
-                        </div>
-                    </div><!--end card-front-->
-
-                    <!--- CARD, BACK -->
-                    <div class="card-back">
-                        <div class="card-back-content">
-                            <div class="text-constraint">
-                                <div class="text-column">
-                                    <p>Outfit colour recommendation helps the users to pick clothes based on colour suggestions, considering the skin tone and hair colour.</p>
-                                </div>
-                            </div>
-
-                            <img class="screenshot" src="./assets/images/Feat2Screenshot.png" alt="Colourfit colour suggestions preview"/>
-                        </div>
-                    </div><!--end card-back-->
-                </div><!--end card-inner-->
-            </article><!--end one-feature-->
-
-
             <!----- FEATURE: CLOSETS ----->
             <article class="one-feature">
                 <div class="card-inner">
@@ -179,9 +155,8 @@
                     <div class="card-front">
                         <div class="card-front-content">
                             <div class="feature-column">
+                                <h3>closet organization</h3>
                                 <img src="./assets/images/Feat3IMG.png" alt="Closet Organization"/>
-    
-                                <h3>Closet Organization</h3>
                             </div>
                         </div>
                     </div><!--end card-front-->
@@ -196,6 +171,35 @@
                             </div>
 
                             <img class="screenshot" src="./assets/images/Feat3Screenshot.png" alt="Colourfit closets preview"/>
+                        </div>
+                    </div><!--end card-back-->
+                </div><!--end card-inner-->
+            </article><!--end one-feature-->
+
+            <!----- FEATURE: COLOUR RECS ----->
+            <article class="one-feature">
+                <div class="card-inner">
+
+                    <!--- CARD, FRONT -->
+                    <div class="card-front">
+                        <div class="card-front-content">
+                            <div class="feature-column">
+                                <h3>colour suggestions</h3>
+                                <img src="./assets/images/Feat2IMG.png" alt="Colour Suggestions"/>
+                            </div>
+                        </div>
+                    </div><!--end card-front-->
+
+                    <!--- CARD, BACK -->
+                    <div class="card-back">
+                        <div class="card-back-content">
+                            <div class="text-constraint">
+                                <div class="text-column">
+                                    <p>Outfit colour recommendation helps the users to pick clothes based on colour suggestions, considering the skin tone and hair colour.</p>
+                                </div>
+                            </div>
+
+                            <img class="screenshot" src="./assets/images/Feat2Screenshot.png" alt="Colourfit colour suggestions preview"/>
                         </div>
                     </div><!--end card-back-->
                 </div><!--end card-inner-->
@@ -216,7 +220,7 @@
             
             <div class="video-gradient-inner">
                 <div class="video-block">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/BktZOoZuA34?si=dk7sDXimGwtw9RrW" title="Colourfit Promotional Video - YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/BktZOoZuA34?si=dk7sDXimGwtw9RrW&amp;rel=0&amp;modestbranding=1" title="Colourfit Promotional Video - YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
             </div>
 
@@ -225,6 +229,43 @@
     </section>
 
 
+    <!----- DIVIDER / LINE ----->
+    <hr/>
+
+    <!----- SECTION: FEATURES ----->
+    <section class="mockups-section">
+        <header class="headings-group">
+            <h2>Mockups</h2>
+            <p>Check out our mockups our choice of colors aims to ensure high contrast and improved visibility, catering to all users!</p>
+        </header>
+        
+        <div class="mockups-grid mockups-grid-desktop">
+            <div><img src="./assets/images/mockups/card-reverse.png" alt=""></div>
+            <div><img src="./assets/images/mockups/items.png" alt=""></div>
+            <div><img src="./assets/images/mockups/profile.png" alt=""></div>
+            <div><img src="./assets/images/mockups/closet.png" alt=""></div>
+            <div><img src="./assets/images/mockups/scan.png" alt=""></div>
+        </div>
+
+        <div class="mockups-grid mockups-grid-mobile">
+            <div class="mockups-grid-row">
+                <div><img src="./assets/images/mockups/card-reverse.png" alt=""></div>
+                <div><img src="./assets/images/mockups/items.png" alt=""></div>
+            </div>
+            <div class="mockups-grid-row">
+                <div><img src="./assets/images/mockups/profile.png" alt=""></div>
+                <div><img src="./assets/images/mockups/closet.png" alt=""></div>
+                <div><img src="./assets/images/mockups/scan.png" alt=""></div>
+            </div>
+            
+            
+        </div>
+
+        <div class="mockups-btn">
+            <a class="download-proposal-btn" target="_blank" href="https://acrobat.adobe.com/link/review?uri=urn:aaid:scds:US:b150a20f-a618-3c00-9cd9-5ba42f785f0f">Download Proposal</a>
+        </div>
+    </section>
+    
 
     <!----- DIVIDER / LINE ----->
     <hr/>
@@ -236,8 +277,8 @@
             <p>Our exceptional team that turns impossible into possible and creates wonders!</p>
         </heading>
 
+
         <div class="team-grid">
-            <div class="team-row">
                 <div class="one-person">
                     <div class="avatar-wrap">
                         <img class="avatar-gray" src="./assets/images/team/gray/ellie.png" alt="Ellie Kim"/>
@@ -249,13 +290,13 @@
                         <p>UI/UX Designer<br>Project Manager</p>
 
                         <div class="person-links">
-                            <a href="#">
+                            <a target="_blank" href="https://www.linkedin.com/in/elliejhkim12/">
                                 <object type="image/svg+xml" data="./assets/svgs/linkedin.svg">
                                     <img src="./assets/images/linkedin.png" alt="LinkedIn"/>
                                 </object>
                             </a>
 
-                            <a href="#">
+                            <a target="_blank" href="http://elliejkim.com/">
                                 <object type="image/svg+xml" data="./assets/svgs/link.svg">
                                     <img src="./assets/images/link.png" alt="Portfolio"/>
                                 </object>
@@ -276,13 +317,13 @@
                         <p>Design Lead<br>UI/UX Designer</p>
 
                         <div class="person-links">
-                            <a href="#">
+                            <a target="_blank" href="https://www.linkedin.com/in/lunasever">
                                 <object type="image/svg+xml" data="./assets/svgs/linkedin.svg">
                                     <img src="./assets/images/linkedin.png" alt="LinkedIn"/>
                                 </object>
                             </a>
 
-                            <a href="#">
+                            <a target="_blank" href="https://lunasever.com">
                                 <object type="image/svg+xml" data="./assets/svgs/link.svg">
                                     <img src="./assets/images/link.png" alt="Portfolio"/>
                                 </object>
@@ -303,13 +344,13 @@
                         <p>UI/UX Designer</p>
 
                         <div class="person-links">
-                            <a href="#">
+                            <a target="_blank" href="https://www.linkedin.com/in/xinhuiwang">
                                 <object type="image/svg+xml" data="./assets/svgs/linkedin.svg">
                                     <img src="./assets/images/linkedin.png" alt="LinkedIn"/>
                                 </object>
                             </a>
 
-                            <a href="#">
+                            <a target="_blank" href="http://xinhuiwang.ca">
                                 <object type="image/svg+xml" data="./assets/svgs/link.svg">
                                     <img src="./assets/images/link.png" alt="Portfolio"/>
                                 </object>
@@ -317,11 +358,12 @@
                         </div><!--end person-links-->
                     </div><!--end person-text-->
                 </div><!--end one-person-->
-            </div><!--end team-row-->
+
+
+                <div class="flex-break"></div>
 
 
 
-            <div class="team-row">
                 <div class="one-person">
                     <div class="avatar-wrap">
                         <img class="avatar-gray" src="./assets/images/team/gray/anson.png" alt="Anson Su"/>
@@ -333,13 +375,13 @@
                         <p>Full Stack Developer</p>
 
                         <div class="person-links">
-                            <a href="#">
+                            <a target="_blank" href="https://www.linkedin.com/in/anson-su/">
                                 <object type="image/svg+xml" data="./assets/svgs/linkedin.svg">
                                     <img src="./assets/images/linkedin.png" alt="LinkedIn"/>
                                 </object>
                             </a>
 
-                            <a href="#">
+                            <a target="_blank" href="https://github.com/ansonsow">
                                 <object type="image/svg+xml" data="./assets/svgs/link.svg">
                                     <img src="./assets/images/link.png" alt="Portfolio"/>
                                 </object>
@@ -360,13 +402,13 @@
                         <p>Full Stack Developer</p>
 
                         <div class="person-links">
-                            <a href="#">
+                            <a target="_blank" href="https://www.linkedin.com/in/se-hyeon-oh-35055416b/">
                                 <object type="image/svg+xml" data="./assets/svgs/linkedin.svg">
                                     <img src="./assets/images/linkedin.png" alt="LinkedIn"/>
                                 </object>
                             </a>
 
-                            <a href="#">
+                            <a target="_blank" href="https://github.com/salomon-oh">
                                 <object type="image/svg+xml" data="./assets/svgs/link.svg">
                                     <img src="./assets/images/link.png" alt="Portfolio"/>
                                 </object>
@@ -387,13 +429,13 @@
                         <p>Front End Developer</p>
 
                         <div class="person-links">
-                            <a href="#">
+                            <a target="_blank" href="https://www.linkedin.com/in/ht-dev">
                                 <object type="image/svg+xml" data="./assets/svgs/linkedin.svg">
                                     <img src="./assets/images/linkedin.png" alt="LinkedIn"/>
                                 </object>
                             </a>
 
-                            <a href="#">
+                            <a target="_blank" href="https://dub.sh/ht-dev">
                                 <object type="image/svg+xml" data="./assets/svgs/link.svg">
                                     <img src="./assets/images/link.png" alt="Portfolio"/>
                                 </object>
@@ -414,13 +456,13 @@
                         <p>Full Stack Developer</p>
 
                         <div class="person-links">
-                            <a href="#">
+                            <a target="_blank" href="https://www.linkedin.com/in/marinacfaria/">
                                 <object type="image/svg+xml" data="./assets/svgs/linkedin.svg">
                                     <img src="./assets/images/linkedin.png" alt="LinkedIn"/>
                                 </object>
                             </a>
 
-                            <a href="#">
+                            <a target="_blank" href="https://github.com/mahzinhaaugusto">
                                 <object type="image/svg+xml" data="./assets/svgs/link.svg">
                                     <img src="./assets/images/link.png" alt="Portfolio"/>
                                 </object>
@@ -428,10 +470,96 @@
                         </div><!--end person-links-->
                     </div><!--end person-text-->
                 </div><!--end one-person-->
-            </div><!--end team-row-->
         </div><!--end team-grid-->
     </section>
 </main>
+
+<!----- FOOTER ----->
+<footer id="contact">
+    <div class="footer-inner">
+        <!---- TAGLINE ---->
+        <div class="tagline-cont">
+            <div class="tagline">
+                <object type="image/svg+xml" data="./assets/svgs/quote-left.svg">
+                    <img src="./assets/images/quote-left.png" alt="Left quotation mark"/>
+                </object>
+
+                <h2 aria-label="Unlock a world of vibrant possibilities">
+                    Unlock a world of vibrant <br><span>possibilities</span>
+                </h2>
+
+                <object type="image/svg+xml" data="./assets/svgs/quote-right.svg">
+                    <img src="./assets/images/quote-right.png" alt="Right quotation mark"/>
+                </object>
+            </div><!--end tagline-->
+        </div><!--end tagline-cont-->
+
+        <!---- CONTACT FORM ---->
+        <form>
+            <div class="form-row">
+                <label for="name">Name:</label>
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    autocomplete="name"
+                    placeholder="Name"
+                >
+            </div>
+
+            <div class="form-row">
+                <label for="email">Telephone:</label>
+                <input
+                    type="tel"
+                    id="tel"
+                    name="tel"
+                    autocomplete="tel"
+                    placeholder="Telephone"
+                >
+            </div>
+
+            <div class="form-row">
+                <label for="email">Email:</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    autocomplete="email"
+                    placeholder="Email"
+                >
+            </div>
+
+            <div class="form-row">
+                <label for="comment">Comment:</label>
+                <textarea
+                    id="comment"
+                    name="comment"
+                    required aria-required="true"
+                    placeholder="Comment"
+                    rows="1"
+                ></textarea>
+            </div>
+
+            <div class="form-title">
+                <object type="image/svg+xml" data="./assets/svgs/logo-white.svg">
+                    <img src="./assets/images/logo-white.png" alt="Colourfit Logo"/>
+                </object>
+
+                <h4>Get in touch with us</h4>
+            </div>
+
+            <div class="form-submit">
+                <button type="submit" value="Submit">Submit</button>
+            </div>
+        </form>
+    </div><!--end footer-inner-->
+
+    <div class="copyright-holder">
+        <span>&copy; 2023 Team Rhealm. All Rights Reserved.</span>
+    </div>
+</footer>
+
+</div><!--end main-content-->
 
 </body>
 </html>
