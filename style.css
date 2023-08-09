@@ -50,7 +50,7 @@ img, canvas, object, video, figure, iframe {
 }
 
 a {
-    font-family: headingFontBold;
+    font-family: headingFont;
     font-size:var(--Body-Text-L);
     font-weight:600;
     text-decoration:none;
@@ -258,11 +258,12 @@ nav ul {
     line-height:var(--Line-Height-XS);
     max-width:calc(100% - 10px);
     text-align:right;
-    letter-spacing: -1.44px;
+    letter-spacing: calc(0px - var(--Body-Text-Letter-Spacing-S));
     transform: translateY(calc(var(--Header-Text-Translate)*(-1)));
 }
 
 .welcome-header h1 span {
+    padding:0 var(--Body-Text-Letter-Spacing-S); /* bc somehow the rainbow text gets cut off at the end */
     color: var(--Text-Color-1);
     background: linear-gradient(to right,
         rgba(132, 196, 44, 0.8),
@@ -281,7 +282,7 @@ nav ul {
 
 .welcome-header p {
     margin:0;
-    font-family: headingFontBold;
+    font-family: headingFont;
     font-size: var(--Body-Text-L);
     color: var(--Text-Color-4);
     transform: translateY(var(--Header-Text-Translate));
@@ -358,7 +359,8 @@ hr.nav-divider {
 .headings-group p {
     margin-left:auto;
     margin-right:auto;
-    font-size:var(--Body-Text-L);
+    font-size:calc(var(--Body-Text-L) + 2px);
+    letter-spacing:var(--Body-Text-Letter-Spacing-XS);
     line-height:var(--Line-Height-M);
     max-width:50vw;
 }
@@ -405,8 +407,10 @@ hr.nav-divider {
 
 .card-front-content {
     position:relative;
-    width:calc(100% - (var(--Rainbow-Borders-Width) * 2));
-    height:calc(100% - (var(--Rainbow-Borders-Width) * 2));
+    /* width:calc(100% - (var(--Rainbow-Borders-Width) * 2));
+    height:calc(100% - (var(--Rainbow-Borders-Width) * 2)); */
+    width:100%;
+    height:100%;
     padding:1.5em;
     background:var(--Background-1);
     border-radius:calc(var(--Features-Border-Radius) - var(--Rainbow-Borders-Width));
@@ -612,7 +616,50 @@ hr.nav-divider {
     width:var(--Video-Width);
     border-radius:var(--Video-Border-Radius);
     overflow:hidden;
+    box-shadow: 1rem 1rem 2.5rem rgba(0,0,0,0.25);
     z-index:2;
+}
+
+.video-block [data-player]{
+    width:100%!important;
+    height:calc(var(--Video-Width) / 16 * 9)!important;
+}
+
+.video-block .media-control[data-media-control] .media-control-background[data-background]{
+    height:30%!important;
+}
+
+.video-block .media-control-indicator {
+    font-family:inherit!important;
+    font-size:var(--Body-Text-M)!important
+}
+
+.video-block .play-wrapper {
+    height:4rem!important;
+    opacity:1!important;
+}
+
+.video-block .media-control[data-media-control] .media-control-icon {
+    opacity:0.9!important
+}
+
+.video-block .play-wrapper svg {
+    position:relative;
+    filter: drop-shadow(4px 4px 12px rgba(0,0,0,0.25));
+    z-index:0;
+}
+
+.video-block .player-wrapper svg:after {
+    content:"";
+    position:absolute;
+    top:0;left:0;
+    width:100%;
+    height:100%;
+    background:purple
+}
+
+.video-block .play-wrapper svg path[fill]{
+    fill: #a7b2e7!important;
 }
 
 .video-block img {
@@ -699,6 +746,10 @@ hr.nav-divider {
 
 .person-text > * {
     margin:0; /* remove default margin from .person-text child elements */
+}
+
+.person-text p {
+    letter-spacing:var(--Body-Text-Letter-Spacing-XS);
 }
 
 .person-text h4 {
@@ -929,9 +980,12 @@ footer textarea {
 }
 
 .download-proposal-btn {
+    position:relative;
     font-family: bodyFont;
     padding: 8px 28px;
     border-radius: 15px;
     box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.15);
     letter-spacing: var(--Body-Text-Letter-Spacing-XS);
+    text-shadow:none;
+    z-index:0;
 }

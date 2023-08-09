@@ -1,3 +1,12 @@
+<!--------------------------------------------
+
+    COLOURFIT © 2023
+
+    Credits:
+    - "clappr" video player:
+      https://github.com/clappr/clappr
+
+--------------------------------------------->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,6 +25,7 @@
 <link href="./responsive.css" rel="stylesheet">
 
 <script src="./script.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/@clappr/player@latest/dist/clappr.min.js"></script>
 
 <link rel="preload" href="./assets/images/headerBG.png" as="image">
 
@@ -24,7 +34,7 @@
 
 <!----- LOADING ANIMATION ----->
 <div class="loading-screen">
-    <video muted autoplay src="./assets/videos/welcome-short.mp4"></video>
+    <video muted autoplay src="./assets/videos/welcome-short.mp4" preload></video>
 </div>
 
 <!----- TOP BAR ----->
@@ -87,7 +97,9 @@
             <div class="header-wrap">
                 <div class="header-left">
                     <!----- HEADER, HEADING ----->
-                    <h1>Unlock a world of vibrant <span>possibilities</span></h1>
+                    <h1 aria-label="Unlock a world of vibrant possibilities">
+                        Unlock a world of vibrant <span>possibilities</span>
+                    </h1>
                 </div>
 
                 <!----- HEADER, DESKTOP IMAGES ----->
@@ -97,7 +109,7 @@
 
                 <div class="header-right">
                     <!----- HEADER, PARAGRAPH ----->
-                    <p>enhance the dressing experience for  visually impaired individuals through outfit colour recommendations!</p>
+                    <p>Enhance the dressing experience for  visually impaired individuals through outfit colour recommendations!</p>
                 </div>
             </div><!--end header-wrap-->
     </header>
@@ -126,7 +138,7 @@
                     <div class="card-front  ">
                         <div class="card-front-content">
                             <div class="feature-column">
-                                <h3>scan & verification</h3>
+                                <h3>Scan & verification</h3>
                                 <img src="./assets/images/Feat1IMG.png" alt="Scan and Verification"/>
                             </div>
                         </div>
@@ -155,7 +167,7 @@
                     <div class="card-front">
                         <div class="card-front-content">
                             <div class="feature-column">
-                                <h3>closet organization</h3>
+                                <h3>Closet organization</h3>
                                 <img src="./assets/images/Feat3IMG.png" alt="Closet Organization"/>
                             </div>
                         </div>
@@ -184,7 +196,7 @@
                     <div class="card-front">
                         <div class="card-front-content">
                             <div class="feature-column">
-                                <h3>colour suggestions</h3>
+                                <h3>Colour suggestions</h3>
                                 <img src="./assets/images/Feat2IMG.png" alt="Colour Suggestions"/>
                             </div>
                         </div>
@@ -220,7 +232,14 @@
             
             <div class="video-gradient-inner">
                 <div class="video-block">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/BktZOoZuA34?si=dk7sDXimGwtw9RrW&amp;rel=0&amp;modestbranding=1" title="Colourfit Promotional Video - YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/BktZOoZuA34?si=dk7sDXimGwtw9RrW&amp;rel=0&amp;modestbranding=1" title="Colourfit Promotional Video - YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+                    <script>
+                        var player = new Clappr.Player({
+                            parentId: ".video-block",
+                            source: "./assets/videos/ColourFit_LongVideo_V3.mp4",
+                            poster: "./assets/images/videoPoster.jpg",
+                        });
+                    </script>
                 </div>
             </div>
 
@@ -232,7 +251,7 @@
     <!----- DIVIDER / LINE ----->
     <hr/>
 
-    <!----- SECTION: FEATURES ----->
+    <!----- SECTION: MOCKUPS ----->
     <section class="mockups-section">
         <header class="headings-group">
             <h2>Mockups</h2>
@@ -240,22 +259,22 @@
         </header>
         
         <div class="mockups-grid mockups-grid-desktop">
-            <div><img src="./assets/images/mockups/card-reverse.png" alt=""></div>
-            <div><img src="./assets/images/mockups/items.png" alt=""></div>
-            <div><img src="./assets/images/mockups/profile.png" alt=""></div>
-            <div><img src="./assets/images/mockups/closet.png" alt=""></div>
-            <div><img src="./assets/images/mockups/scan.png" alt=""></div>
+            <div><img src="./assets/images/mockups/card-reverse.png" alt="Colourfit mockup: home screen, trending slider item flip view."></div>
+            <div><img src="./assets/images/mockups/items.png" alt="Colourfit mockup: closet screen, showing pinned colours and the user's clothing items."></div>
+            <div><img src="./assets/images/mockups/profile.png" alt="Colourfit mockup: edit profile screen, change hair colour dropdown."></div>
+            <div><img src="./assets/images/mockups/closet.png" alt="Colourfit mockup: closet screen, showing pinned colors and the user's custom closets."></div>
+            <div><img src="./assets/images/mockups/scan.png" alt="Colourfit mockup: save scanned clothing item screen with colour information and fields to confirm texture and clothing type."></div>
         </div>
 
         <div class="mockups-grid mockups-grid-mobile">
             <div class="mockups-grid-row">
-                <div><img src="./assets/images/mockups/card-reverse.png" alt=""></div>
-                <div><img src="./assets/images/mockups/items.png" alt=""></div>
+                <div><img src="./assets/images/mockups/card-reverse.png" alt="Colourfit mockup: home screen, trending slider item flip view."></div>
+                <div><img src="./assets/images/mockups/items.png" alt="Colourfit mockup: closet screen, showing pinned colours and the user's clothing items."></div>
             </div>
             <div class="mockups-grid-row">
-                <div><img src="./assets/images/mockups/profile.png" alt=""></div>
-                <div><img src="./assets/images/mockups/closet.png" alt=""></div>
-                <div><img src="./assets/images/mockups/scan.png" alt=""></div>
+                <div><img src="./assets/images/mockups/profile.png" alt="Colourfit mockup: edit profile screen, change hair colour dropdown."></div>
+                <div><img src="./assets/images/mockups/closet.png" alt="Colourfit mockup: closet screen, showing pinned colors and the user's custom closets."></div>
+                <div><img src="./assets/images/mockups/scan.png" alt="Colourfit mockup: save scanned clothing item screen with colour information and fields to confirm texture and clothing type."></div>
             </div>
             
             

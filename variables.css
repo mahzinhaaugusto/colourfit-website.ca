@@ -63,7 +63,7 @@ body {
     --Nav-Logo-Width: 160px;
 
     --Nav-Links-Touch-Padding: 10px;
-    --Nav-Links-Spacing: 4.5rem;
+    --Nav-Links-Spacing: 3.75rem;
 
     /*----- HEADER -----*/
     --Header-Height: calc(var(--Container-Width) * 0.6);

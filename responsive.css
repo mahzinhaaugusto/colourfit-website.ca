@@ -1,4 +1,5 @@
 /*----------- DESKTOP / WIDE -----------*/
+
 @media(min-width: 901px){
     html, body {
         overscroll-behavior-y:none;
@@ -7,12 +8,30 @@
     body {
         --Team-Section-Width:85vw;
     }
+
+    .download-proposal-btn {
+        transition:text-shadow 0.25s ease-in-out;
+    }
+    
+    .download-proposal-btn:hover {    
+        text-shadow: 2px 2px 3px rgba(0,0,0,0.12)
+    }
+
+    .card-back-content img.screenshot {
+        width: 50%
+    }
+
+    .text-constraint {
+        width: 40%;
+        height: 100%;
+    }
 }
 
 @media(min-width: 901px) and (max-width:1200px) {
     .card-back-content img.screenshot {
         display: none;
     }
+
     .text-constraint {
         width: 100%;
     }
@@ -177,7 +196,7 @@
 
     .nav-links li {
         width: 100%;
-        border: 1px solid var(--Line-Color);
+        border-top: 1px solid var(--Line-Color);
         margin-left:auto;
         margin-right:auto;
         text-align:center;
@@ -185,7 +204,7 @@
 
     .nav-links li a {
         font-size:var(--Body-Text-L);
-        padding: 12px 0;
+        padding: var(--Mobile-Nav-Links-Touch-Padding) 0;
         font-family: headingFont !important;
         background: var(--Off-White);
     }
@@ -198,6 +217,7 @@
     .nav-links .download-proposal-btn {
         box-shadow: none;
         font-family: headingFontBold;
+        letter-spacing: 0px;
     }
 
     /*---------------------------*/
@@ -209,6 +229,10 @@
         margin-bottom:calc(0px - var(--Sections-Spacing-Y));
         width:100%;
         height: calc(100vh - var(--Mobile-Nav-Height));
+    }
+
+    .header-gradient {
+        z-index:-1;
     }
 
     .welcome-header-inner {
@@ -229,6 +253,7 @@
         max-width:none;
         transform: none;
         text-align:center;
+        line-height:var(--Line-Height-S)
     }
 
     .welcome-header p {
@@ -466,24 +491,26 @@
         line-height:var(--Line-Height-M)
     }
 
-    .text-constraint .text-column {
+    /* .text-constraint .text-column {
         height:100%;
         display:block;
-    }
+    } */
 
     .text-constraint .text-column p {
         font-size:var(--Body-Text-M);
     }
 
-    .tagline object {
+    /* .tagline object {
         display: none;
+    } */
+
+    
+
+    .text-constraint {
+        width: 55%;
     }
 
     .card-back-content img.screenshot {
-        display: none;
-    }
-
-    .text-constraint {
-        width: 100%;
+        width: 45%
     }
 }
